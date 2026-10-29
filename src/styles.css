@@ -1117,3 +1117,11 @@ button:disabled {
   }
 }
 
+.header-icon {
+  display: block;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 10px;
+}

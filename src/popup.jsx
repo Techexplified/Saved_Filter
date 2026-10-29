@@ -572,9 +572,13 @@ function Popup() {
     <div className="app" onClick={() => setMenuFilter(null)}>
       <header className="header">
         <div className="header-title">
-          <span className="header-icon">◈</span>
-          <h1>Saved Filter Views</h1>
-        </div>
+  <img
+    className="header-icon"
+    src="/images/saved-filter-logo.png"
+    alt="Saved Filter Views"
+  />
+  <h1>Saved Filter Views</h1>
+</div>
       </header>
 
       <main className="saved-list">
