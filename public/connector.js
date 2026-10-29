@@ -1,26 +1,16 @@
 
 /* ==========================================
-   SAVED FILTER VIEWS
-   TRELLO POWER-UP CONNECTOR
+   SAVED FILTER VIEWS - TRELLO POWER-UP
 ========================================== */
 
 const POWERUP_NAME = "Saved Filter Views";
 
+const BASE_URL = "https://saved-filter.vercel.app";
+
 const POWERUP_ICON =
-  "https://savedfilter.vercel.app/favicon.ico";
+  `${BASE_URL}/images/saved-filter-logo.png`;
 
-/* ==========================================
-   POPUP URL
-========================================== */
-
-const APP_URL = new URL(
-  "/popup.html",
-  window.location.origin
-).toString();
-
-/* ==========================================
-   INITIALIZE POWER-UP
-========================================== */
+const APP_URL = `${BASE_URL}/popup.html`;
 
 window.TrelloPowerUp.initialize({
   "board-buttons": function (t) {
@@ -32,6 +22,8 @@ window.TrelloPowerUp.initialize({
           dark: POWERUP_ICON,
           light: POWERUP_ICON,
         },
+
+        condition: "always",
 
         callback: function (t) {
           return t.popup({
